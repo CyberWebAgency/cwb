@@ -63,14 +63,22 @@ AOS.init({
 function initMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-
+    
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
-            // Add animation class
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('animate-fade-in');
-            }
+            
+            // Use requestAnimationFrame to ensure the transition works
+            requestAnimationFrame(() => {
+                if (!isHidden) {
+                    mobileMenu.style.opacity = '0';
+                    mobileMenu.style.transform = 'translateY(-10px)';
+                } else {
+                    mobileMenu.style.opacity = '1';
+                    mobileMenu.style.transform = 'translateY(0)';
+                }
+            });
         });
     }
 }

@@ -3088,7 +3088,17 @@ nav .container {
   right: 0;
   background-color: rgba(16, 16, 29, 0.98);
   border-bottom: 1px solid var(--border-color);
+  transform-origin: top;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 nav a {
   position: relative;
   transition: var(--transition-fast);
@@ -3251,7 +3261,7 @@ nav a:hover::after, nav a.active::after {
   border-color: var(--accent-color);
 }
 .animate-fade-in {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 0.3s ease-out;
 }
 .animate-slide-up {
   animation: slideUp 1s ease-out;
@@ -3260,7 +3270,7 @@ nav a:hover::after, nav a.active::after {
   animation: pulse 2s infinite;
 }
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 .animate-glow {
   animation: glow 3s infinite ease-in-out;
