@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /portfolio.html
+Allow: /contact.html
+Disallow: /img/raw/
+Disallow: /assets/temp/
+Disallow: /scripts/dev/
+
+# Prevent media files from being indexed directly
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.pdf$
+
+# Allow CSS, JS, and fonts
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.woff$
+Allow: /*.woff2$
+
+# Point to the sitemap
+Sitemap: https://cyberwebopera.com/sitemap.xml 

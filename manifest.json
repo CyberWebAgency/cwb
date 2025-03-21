@@ -1,0 +1,45 @@
+{
+  "name": "Cyberweb OPERA - Web Development & Digital Marketing Agency",
+  "short_name": "Cyberweb OPERA",
+  "description": "Professional web development, mobile app, and digital marketing services to transform your digital presence.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#3B82F6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "url": "/services.html",
+      "description": "View our services"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/portfolio.html",
+      "description": "See our work"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact.html",
+      "description": "Get in touch"
+    }
+  ],
+  "categories": ["business", "web development", "digital marketing", "technology"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
+} 

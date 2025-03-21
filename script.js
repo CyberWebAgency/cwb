@@ -6,14 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroImageOverlay = document.getElementById('hero-image-overlay');
     const heroSection = document.getElementById('home');
 
+    // Register service worker for offline capabilities and better performance
+    registerServiceWorker();
+
     // Set hero section as interactive
     if (heroSection) {
         heroSection.classList.add('interactive-container');
     }
 
     // Initialize AOS with better performance settings
-AOS.init({
-    duration: 800,
+    AOS.init({
+        duration: 800,
         once: true, // Changed to true for better performance
         offset: 100,
         easing: 'ease-out',
@@ -51,12 +54,89 @@ AOS.init({
     // Apply hover effects for "Why Choose Us" cards
     initChooseCards();
 
-    // Initialize about section interactive elements
+    // Add enhanced animations
+    enhanceAnimations();
+
+    // Initialize About page interactions
     initAboutInteractions();
 
-    // Function to initialize more vibrant animations
-    enhanceAnimations();
+    // Add schema.org structured data support
+    addStructuredDataSupport();
+
+    // Handle web vitals measurements
+    measureWebVitals();
 });
+
+// Register service worker for offline capabilities
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+        });
+    }
+}
+
+// Add or update structured data based on page content
+function addStructuredDataSupport() {
+    // Add breadcrumbs structured data
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split('/').pop().replace('.html', '');
+    
+    if (pageName && pageName !== 'index') {
+        const breadcrumbsSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://cyberwebopera.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": capitalizeFirstLetter(pageName),
+                    "item": "https://cyberwebopera.com/" + pageName + ".html"
+                }
+            ]
+        };
+        
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(breadcrumbsSchema);
+        document.head.appendChild(script);
+    }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Measure and report Web Vitals
+function measureWebVitals() {
+    if (typeof web_vitals !== 'undefined') {
+        try {
+            web_vitals.getCLS(sendToAnalytics);
+            web_vitals.getFID(sendToAnalytics);
+            web_vitals.getLCP(sendToAnalytics);
+        } catch (e) {
+            console.log('Web Vitals measurement failed:', e);
+        }
+    }
+}
+
+function sendToAnalytics(metric) {
+    // Here you would normally send the data to your analytics service
+    // For now, just log to console
+    console.log(metric.name, metric.value);
+}
 
 // Extract functions to improve maintainability and performance
 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Cyberweb OPERA</title>
+    <meta name="description"
+        content="The page you're looking for couldn't be found. Navigate back to the Cyberweb OPERA website.">
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans">
+    <!-- Navbar with Dark Tech Theme -->
+    <nav class="fixed w-full py-4 z-50 top-0 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold flex items-center space-x-2">
+                <img src="img/logo.png" alt="Cyberweb OPERA" class="w-12 h-12 rounded-full">
+                <span>Cyberweb<span class="gradient-text-primary">OPERA</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="md:hidden bg-background-card border-t border-border-color hidden absolute top-16 left-0 w-full shadow-xl">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="block py-2 px-4 hover:bg-background-light rounded-lg">Home</a>
+                <a href="about.html" class="block py-2 px-4 hover:bg-background-light rounded-lg">About</a>
+                <a href="services.html" class="block py-2 px-4 hover:bg-background-light rounded-lg">Services</a>
+                <a href="portfolio.html" class="block py-2 px-4 hover:bg-background-light rounded-lg">Portfolio</a>
+                <a href="contact.html" class="block py-2 px-4 hover:bg-background-light rounded-lg">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Hero Section -->
+    <section class="hero-section py-16 md:py-24 lg:pt-32 lg:pb-24 relative overflow-hidden bg-gradient-primary">
+        <!-- Tech background pattern -->
+        <div class="absolute inset-0 bg-pattern-lines opacity-20"></div>
+        
+        <!-- Floating particles -->
+        <div class="particles-container absolute inset-0 z-0 overflow-hidden">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="lg:w-1/2" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white"><span
+                            class="gradient-text-primary">404</span> Error</h1>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white">Page Not Found</h2>
+                    <p class="text-lg text-gray-300 mb-8">Oops! The page you're looking for doesn't exist or has been moved. Here are some helpful links to get you back on track:</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div
+                            class="bg-background-card p-4 rounded-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-blue-500 focus:scale-105 focus:border-blue-500 group about-feature-card hover:bg-background-light cursor-pointer">
+                            <div class="text-blue-500 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <a href="index.html" class="text-white">Homepage</a>
+                        </div>
+                        <div
+                            class="bg-background-card p-4 rounded-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-green-500 focus:scale-105 focus:border-green-500 group about-feature-card hover:bg-background-light cursor-pointer">
+                            <div class="text-green-500 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <a href="services.html" class="text-white">Our Services</a>
+                        </div>
+                        <div
+                            class="bg-background-card p-4 rounded-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-purple-500 focus:scale-105 focus:border-purple-500 group about-feature-card hover:bg-background-light cursor-pointer">
+                            <div class="text-purple-500 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <a href="portfolio.html" class="text-white">Portfolio</a>
+                        </div>
+                        <div
+                            class="bg-background-card p-4 rounded-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-yellow-500 focus:scale-105 focus:border-yellow-500 group about-feature-card hover:bg-background-light cursor-pointer">
+                            <div class="text-yellow-500 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="contact.html" class="text-white">Contact Us</a>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html"
+                        class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md font-medium transition-all duration-300 transform hover:shadow-lg hover:-translate-y-1 px-8 py-3 text-center inline-block">
+                        Back to Homepage
+                    </a>
+                </div>
+                <div class="w-full hero-image-container flex justify-center relative" data-aos="fade-left">
+                    <!-- Main tech graphic container -->
+                    <div class="relative w-full max-w-xl lg:max-w-2xl">
+                        <!-- Dark tech background -->
+                        <div
+                            class="w-full h-96 lg:h-[32rem] rounded-xl bg-background-card border border-blue-500/30 overflow-hidden relative">
+                            <!-- Circuit board pattern background -->
+                            <div class="absolute inset-0 bg-pattern-dots opacity-40"></div>
+
+                            <!-- Glow effects -->
+                            <div
+                                class="absolute -bottom-24 -right-24 w-80 h-80 bg-primary-color rounded-full opacity-15 filter blur-3xl">
+                            </div>
+                            <div
+                                class="absolute -top-24 -left-24 w-80 h-80 bg-blue-500 rounded-full opacity-15 filter blur-3xl">
+                            </div>
+                            
+                            <!-- 404 Error Image -->
+                            <img src="img/error404.png" alt="404 Error" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 hero-glow animate-float overflow-visible" />
+                        </div>
+
+                        <!-- Error illustration -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-2xl text-white bg-blue-500/20 px-4 py-2 rounded-lg backdrop-blur-sm inline-block">Error 404! Page Not Found</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating tech elements -->
+                        <div
+                            class="floating-tech-element absolute top-10 right-12 w-32 h-32 bg-blue-500/20 backdrop-blur-sm rounded-lg border border-blue-500/30 flex items-center justify-center transform rotate-12 animate-float">
+                            <i class="fas fa-exclamation-triangle text-blue-500 text-3xl"></i>
+                        </div>
+
+                        <div
+                            class="floating-tech-element absolute bottom-10 left-12 w-32 h-32 bg-purple-500/20 backdrop-blur-sm rounded-lg border border-purple-500/30 flex items-center justify-center transform -rotate-12 animate-float"
+                            style="animation-delay: 1s;">
+                            <i class="fas fa-search text-purple-500 text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Help Section -->
+    <section class="py-16 bg-background-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text-primary">Need Help?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-background-card rounded-lg shadow-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-blue-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-500 text-3xl mb-4 transform-gpu hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Visit Our Sitemap</h3>
+                    <p class="text-gray-300 mb-4">Browse all pages on our website to find what you're looking for.</p>
+                    <a href="index.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+                        Explore <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="p-6 bg-background-card rounded-lg shadow-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-blue-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-green-500 text-3xl mb-4 transform-gpu hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Contact Support</h3>
+                    <p class="text-gray-300 mb-4">Our support team is ready to help you find what you need.</p>
+                    <a href="contact.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+                        Get in Touch <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="p-6 bg-background-card rounded-lg shadow-lg border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:border-blue-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-yellow-500 text-3xl mb-4 transform-gpu hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Explore Services</h3>
+                    <p class="text-gray-300 mb-4">Check out our range of services to see how we can help your business.</p>
+                    <a href="services.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+                        View Services <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white pt-20 pb-10 border-t border-border-color">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-6">Cyberweb <span class="text-blue-400">OPERA</span></h3>
+                    <p class="mb-6 text-gray-400">Your trusted partner for digital transformation and innovative
+                        solutions that drive growth and deliver exceptional experiences.</p>
+                    <div class="flex space-x-4">
+                        <a target="_blank" href="https://www.facebook.com/share/19dGM3xUX2/"
+                            class="bg-gray-800 hover:bg-blue-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/company/cyberweb-opera"
+                            class="bg-gray-800 hover:bg-blue-800 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/cyberwebopera/"
+                            class="bg-gray-800 hover:bg-pink-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a target="_blank" href="https://wa.me/917900742464"
+                            class="bg-gray-800 hover:bg-green-600 p-2 rounded-full transition-all duration-300">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-all">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition-all">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-xl font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">Web
+                                Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">Mobile Apps</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">UI/UX Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">E-commerce
+                                Solutions</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">Digital
+                                Marketing</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-all">Technical SEO</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact and Support</h4>
+                    <p class="text-gray-400 mb-4">Contact us for any inquiries or support.</p>
+                    <p class="text-gray-400 mb-4">Website: <a href="https://cyberwebopera.com/"
+                            class="text-blue-400 hover:text-white">cyberwebopera.com</a></p>
+                    <p class="text-gray-400 mb-4">Email: info@cyberwebopera.com</p>
+                    <p class="text-gray-400 mb-4">Phone: <a href="tel:+917900742464"
+                            class="text-blue-400 hover:text-white">+91 7900742464</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-16 pt-8">
+            <div class="container mx-auto px-6">
+                <div class="text-center text-gray-400 text-sm">
+                    <p>Top Website Developers & Digital Marketing Agency in Agra, India</p>
+                    <p>© 2024 Cyberweb OPERA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html> 
